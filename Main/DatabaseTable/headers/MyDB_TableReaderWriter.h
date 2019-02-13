@@ -46,7 +46,7 @@ public:
 	void writeIntoTextFile (string toMe);
 
 	// access the i^th page in this file
-	MyDB_PageReaderWriter operator[] (size_t i);
+	MyDB_PageReaderWriter operator[] (size_t pageIdx);
 
 	// access the last page in the file
     MyDB_PageReaderWriter last ();
