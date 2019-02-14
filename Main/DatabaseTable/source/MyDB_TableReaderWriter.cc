@@ -63,7 +63,15 @@ MyDB_RecordIteratorPtr MyDB_TableReaderWriter :: getIterator (MyDB_RecordPtr ite
 	return dynamic_pointer_cast<MyDB_RecordIterator>(tableRecordItPtr);
 }
 
-void MyDB_TableReaderWriter :: writeIntoTextFile (string) {
+void MyDB_TableReaderWriter :: writeIntoTextFile (string toMe) {
+	ofstream os(toMe);
+    MyDB_RecordPtr rec = getEmptyRecord();
+	MyDB_RecordIteratorPtr recordIteratorPtr = getIterator(rec);
+	while(recordIteratorPtr->hasNext()){
+	    recordIteratorPtr->getNext();
+	}
+	os.close();
+
 }
 
 
