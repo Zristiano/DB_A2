@@ -69,6 +69,8 @@ void MyDB_TableReaderWriter :: writeIntoTextFile (string toMe) {
 	MyDB_RecordIteratorPtr recordIteratorPtr = getIterator(rec);
 	while(recordIteratorPtr->hasNext()){
 	    recordIteratorPtr->getNext();
+        os<<rec;
+        os<<endl;
 	}
 	os.close();
 

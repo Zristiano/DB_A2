@@ -46,8 +46,8 @@ void initialize() {
 
 	// put the supplier table into the catalog
 	myTable->putInCatalog(myCatalog);
-
 	cout << "finish initialization..." << flush;
+	
 }
 
 void test(){
